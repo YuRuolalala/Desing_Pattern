@@ -22,7 +22,7 @@ class Singleton1{
     }
     public Object readResolve(){//防止反序列化
         return instance;
-    }
+    }//防止反序列化
 }
 
 /**
