@@ -1,6 +1,13 @@
 package Decorator;
 
 public class DecoratorPattern {
+    public static void main(String[] args) {
+        RobotDecorator decorator = new RobotDecorator();
+        FirstRobot robot = new FirstRobot();
+        decorator.RobotDecorator(robot);
+        decorator.doSomething();
+        decorator.doMoreThing();
+    }
 }
 
 interface Robot{
@@ -15,7 +22,7 @@ class FirstRobot implements Robot{
 class RobotDecorator implements Robot{
     private Robot robot;
 
-    public void DecoratorRobot(Robot robot) {
+    public void RobotDecorator(Robot robot) {
         this.robot = robot;
     }
 
